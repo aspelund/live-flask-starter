@@ -22,9 +22,14 @@ Follow these steps to get started with this starter application.
 
 Go to GitHub and [clone the repository](https://github.com/deepgram-starters/prerecorded-node-starter).
 
+#### Python Version Requirement
+
+This project requires **Python 3.10 or higher** to run, as specified by the [Deepgram SDK requirements](https://github.com/deepgram/deepgram-python-sdk). Please ensure your development environment uses a compatible Python version.
+
+
 #### Install dependencies
 
-Install the project dependencies.
+Install the project dependencies. 
 
 ```bash
 pip install -r requirements.txt

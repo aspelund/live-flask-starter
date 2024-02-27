@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template
 from flask_socketio import SocketIO
 from dotenv import load_dotenv
@@ -22,8 +23,11 @@ config = DeepgramClientOptions(
     options={"keepalive": "true"}
 )
 
+# Get Deepgram API key from environment
+API_KEY = os.getenv("DEEPGRAM_API_KEY")
+
 # Initialize Deepgram client and connection
-deepgram = DeepgramClient("", config)
+deepgram = DeepgramClient(API_KEY, config)
 dg_connection = deepgram.listen.live.v("1")
 
 # Track transcription state
